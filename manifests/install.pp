@@ -6,8 +6,5 @@ class pecl::install {
     softec_php::extension { 'dev':}
   }
 
-  softec_php::extension {'php-pear':
-    package => 'php-pear',
-    require => Class["devutils"]
-  }
+  include softec_php::pear
 }
